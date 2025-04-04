@@ -1,0 +1,43 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.2/schema.json",
+    "schema_version": "v2.2",
+    "name_for_human": "CodeGen_0403",
+    "description_for_human": "<Please add description of the plugin>",
+    "namespace": "codegen0403",
+    "functions": [
+        {
+            "name": "getApiListJson",
+            "description": "공시 목록 조회"
+        },
+        {
+            "name": "getHello",
+            "description": "Hello world",
+            "capabilities": {
+                "response_semantics": {
+                    "data_path": "$",
+                    "properties": {
+                        "title": "$.message"
+                    },
+                    "static_template": {
+                        "file": "adaptiveCards/getHello.json"
+                    }
+                }
+            }
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "OpenApi",
+            "auth": {
+                "type": "None"
+            },
+            "spec": {
+                "url": "apiSpecificationFile/openapi.yaml"
+            },
+            "run_for_functions": [
+                "getApiListJson",
+                "getHello"
+            ]
+        }
+    ]
+}

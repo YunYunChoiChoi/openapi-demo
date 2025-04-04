@@ -1,0 +1,24 @@
+table: holdings
+columns:
+  - name: holding_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+  - name: account_id
+    type: INT
+    not_null: true
+    foreign_key: accounts.account_id
+  - name: security_id
+    type: INT
+    not_null: true
+    foreign_key: securities.security_id
+  - name: quantity
+    type: INT
+    not_null: true
+  - name: average_price
+    type: DECIMAL(15,2)
+  - name: updated_at
+    type: DATETIME
+    default: CURRENT_TIMESTAMP
+  - name: unique_constraint
+    unique: [account_id, security_id]

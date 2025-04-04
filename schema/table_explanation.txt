@@ -1,0 +1,14 @@
+customers → 고객
+
+accounts → 계좌 (고객과 1:N)
+
+orders → 주문 (계좌, 종목과 연결)
+
+trades → 체결 (주문과 연결)
+
+securities → 종목 (주식/ETF 등)
+
+quotes → 시세 데이터 (종목과 연결)
+
+holdings → 보유 자산 (계좌 + 종목)
+

@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+  - url: https://example.com
+  - url: https://opendart.fss.or.kr
+paths:
+  /api/list.json:
+    get:
+      summary: 공시 목록 조회
+      parameters:
+        - name: crtfc_key
+          in: query
+          required: true
+          schema:
+            type: string
+          description: 인증키
+        - name: corp_code
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: bgn_de
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: end_de
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 공시 목록 응답
+      operationId: getApiListJson
+  /hello:
+    get:
+      summary: Hello world
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, world!
+      operationId: getHello

@@ -1,0 +1,27 @@
+table: orders
+columns:
+  - name: order_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+  - name: account_id
+    type: INT
+    not_null: true
+    foreign_key: accounts.account_id
+  - name: security_id
+    type: INT
+    not_null: true
+    foreign_key: securities.security_id
+  - name: order_type
+    type: VARCHAR(10)
+  - name: quantity
+    type: INT
+    not_null: true
+  - name: price
+    type: DECIMAL(15,2)
+  - name: order_status
+    type: VARCHAR(20)
+    default: pending
+  - name: ordered_at
+    type: DATETIME
+    default: CURRENT_TIMESTAMP

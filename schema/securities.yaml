@@ -1,0 +1,20 @@
+table: securities
+columns:
+  - name: security_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+  - name: symbol
+    type: VARCHAR(10)
+    unique: true
+    not_null: true
+  - name: name
+    type: VARCHAR(100)
+    not_null: true
+  - name: market
+    type: VARCHAR(50)
+  - name: asset_type
+    type: VARCHAR(20)
+  - name: currency
+    type: VARCHAR(10)
+    default: 'KRW'

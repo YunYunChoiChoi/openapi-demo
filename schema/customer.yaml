@@ -1,0 +1,30 @@
+table: customers
+columns:
+  - name: customer_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+  - name: name
+    type: VARCHAR(100)
+    not_null: true
+  - name: email
+    type: VARCHAR(100)
+    unique: true
+    not_null: true
+  - name: phone
+    type: VARCHAR(20)
+  - name: gender
+    type: CHAR(1)
+    check: "gender IN ('M','F')"
+  - name: birth_date
+    type: DATE
+  - name: join_date
+    type: DATE
+    default: CURRENT_DATE
+  - name: is_active
+    type: BOOLEAN
+    default: true
+  - name: address
+    type: VARCHAR(255)
+  - name: note
+    type: TEXT

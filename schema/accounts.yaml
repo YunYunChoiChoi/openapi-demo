@@ -1,0 +1,22 @@
+table: accounts
+columns:
+  - name: account_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+  - name: customer_id
+    type: INT
+    not_null: true
+    foreign_key: customers.customer_id
+  - name: account_number
+    type: VARCHAR(20)
+    unique: true
+    not_null: true
+  - name: account_type
+    type: VARCHAR(20)
+  - name: opened_at
+    type: DATETIME
+    default: CURRENT_TIMESTAMP
+  - name: is_active
+    type: BOOLEAN
+    default: true

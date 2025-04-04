@@ -1,0 +1,27 @@
+table: quotes
+# 테이블 설명: 주식 시장의 일일 시세 데이터를 저장하는 테이블
+columns:
+  - name: quote_id
+    type: INT
+    primary_key: true
+    auto_increment: true
+    # 설명: 각 시세 데이터를 고유하게 식별하는 ID
+  - name: security_id
+    type: INT
+    not_null: true
+    foreign_key: securities.security_id
+  - name: trade_date
+    type: DATE
+    not_null: true
+  - name: open_price
+    type: DECIMAL(15,2)
+  - name: close_price
+    type: DECIMAL(15,2)
+  - name: high_price
+    type: DECIMAL(15,2)
+  - name: low_price
+    type: DECIMAL(15,2)
+  - name: volume
+    type: BIGINT
+  - name: unique_constraint
+    unique: [security_id, trade_date]

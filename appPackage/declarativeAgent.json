@@ -1,0 +1,27 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json",
+    "version": "v1.3",
+    "name": "CodeGen_0403",
+    "description": "Declarative agent createdㅍ .ㅣflf with Teams Toolkit can assist user in calling APIs and retrieving responses",
+    "instructions": "$[file('instruction.txt')]",
+    "actions": [
+        {
+            "id": "action_1",
+            "file": "ai-plugin.json"
+        }
+    ],
+    "conversation_starters": [
+        {
+            "text": "공시 목록 조회"
+        },
+        {
+            "text": "삼성전자의 재무 현황 조회"
+        },
+        {
+            "text": "LG 전자의 최근 실적 조회"
+        },
+        {
+            "text": "Hello world"
+        }
+    ]
+}
