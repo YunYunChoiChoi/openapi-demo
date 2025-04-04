@@ -1,0 +1,43 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "공시 목록 조회",
+            "weight": "Bolder",
+            "size": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "인증키를 입력하세요:",
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "id": "crtfc_key",
+            "placeholder": "인증키를 입력하세요",
+            "isRequired": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "회사 코드를 입력하세요 (선택 사항):",
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "id": "corp_code",
+            "placeholder": "회사 코드를 입력하세요"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "조회하기",
+            "data": {
+                "action": "getApiListJson"
+            }
+        }
+    ]
+}

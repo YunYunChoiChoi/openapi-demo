@@ -104,7 +104,6 @@ paths:
                         rm:
                           type: string
                           example: "유"
-                          description: 비고 (예: 유/무)
         '400':
           description: 잘못된 요청. 파라미터 확인 필요.
         '500':
